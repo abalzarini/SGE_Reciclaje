@@ -33,7 +33,7 @@ Desarrollar un sistema sencillo de gestión que permita registrar materiales rec
 
 3. Ejecutar la aplicación:
 
-   `python app.py`
+   `python sge.py`
 
 4. Abrir en el navegador:
 
