@@ -1,3 +1,5 @@
+import os
+import secrets
 import sqlite3
 import csv
 from pathlib import Path
@@ -12,7 +14,7 @@ BASE_DATOS = CARPETA / "reciclar.db"
 RESPALDOS = CARPETA / "copias_seguridad"
 
 app = Flask(__name__)
-app.secret_key = "ecogestion-demo-local"
+app.secret_key = os.environ.get("FLASK_SECRET_KEY") or secrets.token_hex(32)
 
 MATERIALES = ["Plástico", "Papel", "Cartón", "Metal", "Vidrio"]
 UNIDADES = ["Kg", "Unidades"]
